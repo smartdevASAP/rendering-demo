@@ -1,8 +1,8 @@
 import "server-only";
 export const serverSideFunction = () => {
   console.log(`multiple dependacies,
-    use multiple libraries
-    browsing tokens
+    use multiple libraries,
+    browsing tokens.
     `);
   return "server result";
 };

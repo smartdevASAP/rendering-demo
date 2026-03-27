@@ -1,6 +1,16 @@
 "use client";
-import { serverSideFunction } from "@/utils/server-utils";
+
+import { useTheme } from "@/components/theme_provider";
+import { clientSideFunction } from "@/utils/client-utils";
 export default function ClientRoute() {
-  const result = serverSideFunction();
-  return <h1>this is a client component {result}</h1>;
+  const theme = useTheme();
+  const result = clientSideFunction();
+  return (
+    <>
+      <h1 style={{ color: theme.colors.primary }}>
+        this is a client component
+      </h1>
+      <p>{result}</p>
+    </>
+  );
 }
